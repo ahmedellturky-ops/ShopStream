@@ -138,87 +138,53 @@
 ========================= */
 
 @media (max-width: 576px) {
-    .top-categories {
-        margin: 28px 0 36px;
 
-        .section-heading {
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
-            padding-inline: 16px;
-            margin-bottom: 18px;
+    .section-heading {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: start;
+        gap: 10px;
+
+        padding-inline: 16px;
+        margin-bottom: 18px;
+    }
+
+    .section-title {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+
+        min-width: 0;
+
+        h2 {
+            margin: 0;
+            font-size: 21px;
+            line-height: 1.3;
+            white-space: normal;
+            overflow-wrap: break-word;
         }
 
-        .section-title {
-            flex-wrap: wrap;
-            align-items: baseline;
-            gap: 4px 8px;
-
-            h2 {
-                font-size: 21px;
-                line-height: 1.3;
-            }
-
-            p {
-                font-size: 12px;
-                line-height: 1.5;
-            }
-        }
-
-        .view-all {
-            margin-left: auto;
-
-            a {
-                font-size: 12px;
-            }
-        }
-
-        /* Compact two-column mobile layout */
-
-        .categories-layout {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            grid-template-rows: 150px 120px 120px;
-            gap: 10px;
-
-            width: 100%;
-            margin: 0 auto;
-            padding-inline: 16px;
-            box-sizing: border-box;
-        }
-
-        .categories-layout>div {
-            min-width: 0;
-            min-height: 0;
-        }
-
-        /* First card: full width */
-
-        .category-large {
-            grid-column: 1 / -1;
-            grid-row: auto;
-        }
-
-        /* Middle cards: side by side */
-
-        .category-small {
-            grid-column: auto;
-            grid-row: auto;
-        }
-
-        /* Last wide card: full width */
-
-        .category-wide {
-            grid-column: 1 / -1;
-            grid-row: auto;
-        }
-
-        .categories-layout .category-card {
-            width: 100%;
-            height: 100%;
-            min-width: 0;
+        p {
+            margin: 0;
+            max-width: 100%;
+            font-size: 12px;
+            line-height: 1.5;
+            overflow-wrap: break-word;
         }
     }
+
+    .view-all {
+        align-self: start;
+        margin-left: 0;
+        flex-shrink: 0;
+
+        a {
+            font-size: 12px;
+            white-space: nowrap;
+        }
+    }
+
 }
 
 /* =========================
