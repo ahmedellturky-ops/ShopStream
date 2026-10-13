@@ -809,3 +809,34 @@
         height: 28px;
     }
 }
+/* =========================
+   MOBILE: TWO PRODUCTS PER ROW
+========================= */
+
+@media (max-width: 576px) {
+    .products-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        width: 100%;
+        align-items: stretch;
+    }
+
+    .products-grid > div {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .products-grid .product-card {
+        width: 100%;
+        min-width: 0;
+        height: 100%;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 380px) {
+    .products-grid {
+        gap: 8px;
+    }
+}
