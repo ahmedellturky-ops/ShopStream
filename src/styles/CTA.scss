@@ -1,0 +1,242 @@
+.cta-section {
+    position: relative;
+    width: calc(100% - 40px);
+    min-height: 235px;
+    margin: 35px auto 40px;
+    padding: 46px 44px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #3f2eea;
+    color: #ffffff;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 3;
+    max-width: 650px;
+}
+
+.cta-label {
+    display: inline-block;
+    margin-bottom: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.cta-content h2 {
+    margin: 0 0 10px;
+    font-size: 34px;
+    line-height: 1.15;
+    font-weight: 750;
+    color: #ffffff;
+}
+
+.cta-content>p {
+    max-width: 620px;
+    margin: 0 0 22px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.78);
+}
+
+.cta-form {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    width: 100%;
+    max-width: 560px;
+}
+
+.cta-input-wrapper {
+    position: relative;
+    flex: 1;
+}
+
+.cta-input-wrapper input {
+    width: 100%;
+    height: 40px;
+    padding: 0 14px;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    background: rgba(255, 255, 255, 0.14);
+    color: #ffffff;
+    font-size: 12px;
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta-input-wrapper input::placeholder {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.cta-input-wrapper input:focus {
+    background: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.14);
+}
+
+.cta-form button {
+    flex-shrink: 0;
+    height: 40px;
+    padding: 0 24px;
+    border: none;
+    border-radius: 7px;
+    background: #006C49;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.cta-form button:hover {
+    background: #078e59;
+    transform: translateY(-1px);
+}
+
+.cta-form button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.cta-error {
+    display: block;
+    margin-top: 6px;
+    font-size: 11px;
+    color: #ffd6d6;
+}
+
+.cta-success {
+    margin: 10px 0 0 !important;
+    font-size: 12px !important;
+    color: #d8ffe9 !important;
+}
+
+
+/* =========================================
+   Vector Background
+   ========================================= */
+
+.cta-vectors {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    width: 500px;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.cta-vector-2 {
+    position: absolute;
+    top: 10px;
+    right: 55px;
+    width: 480px;
+    height: auto;
+    opacity: 0.12;
+}
+
+.cta-vector-1 {
+    position: absolute;
+    top: 82px;
+    right: 128px;
+    width: 335px;
+    height: auto;
+    opacity: 0.12;
+}
+
+
+/* =========================================
+   Tablet
+   ========================================= */
+
+@media (max-width: 992px) {
+    .cta-section {
+        width: calc(100% - 30px);
+        padding: 40px 32px;
+    }
+
+    .cta-content h2 {
+        font-size: 30px;
+    }
+
+   
+    .cta-vectors {
+        right: -60px;
+        transform: scale(0.85);
+        transform-origin: center right;
+    }
+
+}
+
+
+/* =========================================
+   Mobile
+   ========================================= */
+
+@media (max-width: 768px) {
+    .cta-section {
+        width: calc(100% - 24px);
+        min-height: auto;
+        margin: 30px auto;
+        padding: 34px 24px;
+    }
+
+    .cta-content {
+        max-width: 100%;
+    }
+
+    .cta-content h2 {
+        font-size: 27px;
+    }
+
+    .cta-content>p {
+        font-size: 13px;
+    }
+
+    .cta-form {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .cta-input-wrapper {
+        width: 100%;
+    }
+
+    .cta-form button {
+        width: 120px;
+    }
+
+    .cta-vectors {
+        right: -120px;
+        opacity: 0.65;
+    }
+}
+
+
+/* =========================================
+   Small Mobile
+   ========================================= */
+
+@media (max-width: 480px) {
+    .cta-section {
+        padding: 30px 20px;
+        border-radius: 15px;
+    }
+
+    .cta-content h2 {
+        font-size: 24px;
+    }
+
+    .cta-form button {
+        width: 100%;
+    }
+
+    .cta-vectors {
+        display: none;
+    }
+}

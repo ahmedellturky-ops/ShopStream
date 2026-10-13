@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "name": "ShopStream Admin",
+        "emailOrUsername": "admin@shopstream.com",
+        "password": "Admin123",
+        "role": "admin"
+    },
+    {
+        "id": 2,
+        "name": "ShopStream Customer",
+        "emailOrUsername": "customer@shopstream.com",
+        "password": "User123",
+        "role": "customer"
+    }
+]

@@ -1,0 +1,2310 @@
+/* =========================================
+
+   ShopStream Global Theme
+
+========================================= */
+
+
+
+html[data-theme="light"] {
+
+    color-scheme: light;
+
+
+
+    --app-bg: #f5f7fc;
+
+    --surface: #ffffff;
+
+    --surface-secondary: #f8f9fd;
+
+    --surface-hover: #f0f2f9;
+
+
+
+    --text-primary: #202b40;
+
+    --text-secondary: #667085;
+
+    --text-muted: #929db0;
+
+
+
+    --border-color: #e5e9f2;
+
+    --input-bg: #ffffff;
+
+
+
+    --accent: #5146f5;
+
+    --accent-hover: #4035dc;
+
+    --accent-soft: #efedff;
+
+
+
+    --success: #159b70;
+
+    --success-soft: #e6f7ef;
+
+
+
+    --danger: #d94252;
+
+    --danger-soft: #fff0f2;
+
+
+
+    --warning: #c98219;
+
+    --warning-soft: #fff4e4;
+
+
+
+    --table-header: #f8f9fd;
+
+    --table-hover: #f7f8ff;
+
+
+
+    --shadow-sm: 0 3px 12px rgba(31, 45, 75, 0.04);
+
+    --shadow-lg: 0 15px 45px rgba(31, 45, 75, 0.12);
+
+}
+
+
+
+html[data-theme="dark"] {
+
+    color-scheme: dark;
+
+
+
+    /* Backgrounds */
+
+    --app-bg: #111827;
+
+    --surface: #1b2433;
+
+    --surface-secondary: #222d3e;
+
+    --surface-hover: #2b374a;
+
+
+
+    /* Typography */
+
+    --text-primary: #edf2fb;
+
+    --text-secondary: #bdc8d9;
+
+    --text-muted: #91a0b7;
+
+
+
+    /* Borders and inputs */
+
+    --border-color: #354258;
+
+    --input-bg: #222d3e;
+
+
+
+    /* Brand colors */
+
+    --accent: #a69eff;
+
+    --accent-hover: #c2bcff;
+
+    --accent-soft: #302e50;
+
+
+
+    --success: #55d6a6;
+
+    --success-soft: #193c34;
+
+
+
+    --danger: #ff929c;
+
+    --danger-soft: #402630;
+
+
+
+    --warning: #ffcd85;
+
+    --warning-soft: #403426;
+
+
+
+    /* Tables */
+
+    --table-header: #222d3e;
+
+    --table-hover: #283449;
+
+
+
+    /* Shadows */
+
+    --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.12);
+
+    --shadow-lg: 0 18px 50px rgba(0, 0, 0, 0.3);
+
+}
+
+
+
+/* =========================================
+
+   Application Foundation
+
+========================================= */
+
+
+
+html {
+
+    min-height: 100%;
+
+}
+
+
+
+body,
+
+#root {
+
+    min-height: 100vh;
+
+}
+
+
+
+body {
+
+    margin: 0;
+
+    background-color: var(--app-bg);
+
+    color: var(--text-primary);
+
+    transition:
+
+        background-color 0.22s ease,
+
+        color 0.22s ease;
+
+}
+
+
+
+body button,
+
+body input,
+
+body select,
+
+body textarea {
+
+    font: inherit;
+
+}
+
+
+
+body h1,
+
+body h2,
+
+body h3,
+
+body h4,
+
+body h5,
+
+body h6 {
+
+    color: var(--text-primary);
+
+}
+
+
+
+body p {
+
+    color: inherit;
+
+}
+
+
+
+body .text-secondary {
+
+    color: var(--text-secondary) !important;
+
+}
+
+
+
+body .text-muted {
+
+    color: var(--text-muted) !important;
+
+}
+
+
+
+/* =========================================
+
+   Bootstrap Components
+
+========================================= */
+
+
+
+html[data-theme="dark"] body .card,
+
+html[data-theme="dark"] body .modal-content,
+
+html[data-theme="dark"] body .dropdown-menu,
+
+html[data-theme="dark"] body .list-group-item,
+
+html[data-theme="dark"] body .accordion-item {
+
+    background-color: var(--surface) !important;
+
+    color: var(--text-primary) !important;
+
+    border-color: var(--border-color) !important;
+
+    box-shadow: var(--shadow-sm);
+
+}
+
+
+
+html[data-theme="dark"] body .card-header,
+
+html[data-theme="dark"] body .card-footer {
+
+    background-color: var(--surface-secondary) !important;
+
+    color: var(--text-primary) !important;
+
+    border-color: var(--border-color) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .bg-white,
+
+html[data-theme="dark"] body .bg-light {
+
+    background-color: var(--surface) !important;
+
+    color: var(--text-primary) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .border,
+
+html[data-theme="dark"] body .border-top,
+
+html[data-theme="dark"] body .border-bottom,
+
+html[data-theme="dark"] body .border-start,
+
+html[data-theme="dark"] body .border-end {
+
+    border-color: var(--border-color) !important;
+
+}
+
+
+
+/* =========================================
+
+   Navbar
+
+========================================= */
+
+
+
+html[data-theme="dark"] body .navbar-custom {
+
+    background-color: var(--surface) !important;
+
+    border-bottom-color: var(--border-color) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .navbar-custom .navbar-brand {
+
+    color: var(--accent) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .navbar-custom .navbar-links a {
+
+    color: var(--text-secondary) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .navbar-custom .navbar-links a:hover {
+
+    color: var(--accent) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .navbar-custom .navbar-search {
+
+    background-color: var(--surface-secondary) !important;
+
+    border-color: var(--border-color) !important;
+
+    color: var(--text-secondary) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .navbar-custom .navbar-search:focus-within {
+
+    background-color: var(--surface-hover) !important;
+
+    border-color: var(--accent) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .navbar-custom .navbar-search input {
+
+    color: var(--text-primary) !important;
+
+    background: transparent !important;
+
+}
+
+
+
+html[data-theme="dark"] body .navbar-custom .navbar-search input::placeholder {
+
+    color: var(--text-muted) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .navbar-custom .navbar-search button,
+
+html[data-theme="dark"] body .navbar-custom .navbar-icon {
+
+    color: var(--text-secondary) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .navbar-custom .navbar-icon:hover {
+
+    color: var(--accent) !important;
+
+    background-color: var(--surface-hover) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .navbar-custom .navbar-admin-link {
+
+    color: var(--accent) !important;
+
+    background-color: var(--accent-soft) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .navbar-custom .navbar-cart-count,
+
+html[data-theme="dark"] body .navbar-custom .navbar-wishlist-count {
+
+    border-color: var(--surface) !important;
+
+}
+
+
+
+/* =========================================
+
+   Inputs and Selects
+
+========================================= */
+
+
+
+html[data-theme="dark"] body .form-control,
+
+html[data-theme="dark"] body .form-select,
+
+html[data-theme="dark"] body .input-group-text,
+
+html[data-theme="dark"] body input:not([type="checkbox"]):not([type="radio"]):not([type="file"]),
+
+html[data-theme="dark"] body textarea,
+
+html[data-theme="dark"] body select {
+
+    background-color: var(--input-bg);
+
+    color: var(--text-primary);
+
+    border-color: var(--border-color);
+
+}
+
+
+
+html[data-theme="dark"] body input::placeholder,
+
+html[data-theme="dark"] body textarea::placeholder {
+
+    color: var(--text-muted);
+
+    opacity: 1;
+
+}
+
+
+
+html[data-theme="dark"] body .form-control:focus,
+
+html[data-theme="dark"] body .form-select:focus,
+
+html[data-theme="dark"] body input:focus,
+
+html[data-theme="dark"] body textarea:focus,
+
+html[data-theme="dark"] body select:focus {
+
+    border-color: var(--accent);
+
+    box-shadow: 0 0 0 3px rgba(166, 158, 255, 0.12);
+
+}
+
+
+
+html[data-theme="dark"] body option {
+
+    background: var(--surface);
+
+    color: var(--text-primary);
+
+}
+
+
+
+html[data-theme="dark"] body input[type="checkbox"],
+
+html[data-theme="dark"] body input[type="radio"] {
+
+    accent-color: var(--accent);
+
+}
+
+
+
+/* =========================================
+
+   Tables
+
+========================================= */
+
+
+
+html[data-theme="dark"] body .table {
+
+    --bs-table-color: var(--text-primary);
+
+    --bs-table-bg: var(--surface);
+
+    --bs-table-border-color: var(--border-color);
+
+    --bs-table-hover-color: var(--text-primary);
+
+    --bs-table-hover-bg: var(--table-hover);
+
+
+
+    color: var(--text-primary) !important;
+
+    border-color: var(--border-color) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .table> :not(caption)>*>* {
+
+    background-color: var(--surface);
+
+    color: var(--text-primary);
+
+    border-bottom-color: var(--border-color);
+
+}
+
+
+
+html[data-theme="dark"] body .table thead th {
+
+    background-color: var(--table-header) !important;
+
+    color: var(--text-secondary) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .table tbody tr:hover>* {
+
+    background-color: var(--table-hover) !important;
+
+}
+
+
+
+/* =========================================
+
+   ShopStream Product Dashboard
+
+========================================= */
+
+
+
+html[data-theme="dark"] body .admin-products-page .admin-inventory-card,
+
+html[data-theme="dark"] body .admin-products-page .admin-mini-stat,
+
+html[data-theme="dark"] body .admin-products-page .admin-product-modal,
+
+html[data-theme="dark"] body .admin-products-page .admin-product-modal,
+
+html[data-theme="dark"] body .admin-inventory-card {
+
+    background-color: var(--surface) !important;
+
+    color: var(--text-primary) !important;
+
+    border-color: var(--border-color) !important;
+
+    box-shadow: var(--shadow-sm);
+
+}
+
+
+
+html[data-theme="dark"] body .admin-products-page .admin-product-toolbar,
+
+html[data-theme="dark"] body .admin-products-page .admin-filter-panel,
+
+html[data-theme="dark"] body .admin-products-table thead th {
+
+    background-color: var(--table-header) !important;
+
+    color: var(--text-secondary) !important;
+
+    border-color: var(--border-color) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .admin-products-table tbody td {
+
+    color: var(--text-secondary) !important;
+
+    border-color: var(--border-color) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .admin-products-table tbody tr:hover {
+
+    background-color: var(--table-hover) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .admin-products-page .admin-product-name,
+
+html[data-theme="dark"] body .admin-products-page .admin-mini-stat-value,
+
+html[data-theme="dark"] body .admin-products-page .admin-products-title {
+
+    color: var(--text-primary) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .admin-products-page .admin-product-sku,
+
+html[data-theme="dark"] body .admin-products-page .admin-mini-stat-label {
+
+    color: var(--text-muted) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .admin-products-page .admin-product-search input,
+
+html[data-theme="dark"] body .admin-products-page .admin-filter-panel select {
+
+    background-color: var(--input-bg) !important;
+
+    color: var(--text-primary) !important;
+
+    border-color: var(--border-color) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .admin-products-page .admin-outline-btn {
+
+    background-color: var(--surface-secondary) !important;
+
+    color: var(--text-secondary) !important;
+
+    border-color: var(--border-color) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .admin-products-page .admin-outline-btn:hover {
+
+    background-color: var(--surface-hover) !important;
+
+    color: var(--accent) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .admin-product-modal-header,
+
+html[data-theme="dark"] body .admin-product-modal-footer {
+
+    border-color: var(--border-color) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .admin-product-modal-header h3 {
+
+    color: var(--text-primary) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .admin-product-form-field label {
+
+    color: var(--text-secondary) !important;
+
+}
+
+
+
+/* =========================================
+
+   User Management
+
+========================================= */
+
+
+
+html[data-theme="dark"] body .users-directory-card,
+
+html[data-theme="dark"] body .users-stat-card,
+
+html[data-theme="dark"] body .admin-user-modal {
+
+    background-color: var(--surface) !important;
+
+    color: var(--text-primary) !important;
+
+    border-color: var(--border-color) !important;
+
+    box-shadow: var(--shadow-sm);
+
+}
+
+
+
+html[data-theme="dark"] body .users-table thead th {
+
+    background-color: var(--table-header) !important;
+
+    color: var(--text-secondary) !important;
+
+    border-color: var(--border-color) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .users-table tbody td {
+
+    color: var(--text-secondary) !important;
+
+    border-color: var(--border-color) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .users-table tbody tr:hover {
+
+    background-color: var(--table-hover) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .users-page-title,
+
+html[data-theme="dark"] body .users-stat-value,
+
+html[data-theme="dark"] body .users-person-name {
+
+    color: var(--text-primary) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .users-stat-label,
+
+html[data-theme="dark"] body .users-stat-description,
+
+html[data-theme="dark"] body .users-contact-phone,
+
+html[data-theme="dark"] body .users-person-username {
+
+    color: var(--text-muted) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .users-search input {
+
+    background-color: var(--input-bg) !important;
+
+    color: var(--text-primary) !important;
+
+    border-color: var(--border-color) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .admin-user-modal-header,
+
+html[data-theme="dark"] body .admin-user-modal-footer {
+
+    border-color: var(--border-color) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .admin-user-modal-header h3 {
+
+    color: var(--text-primary) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .admin-user-form-field label {
+
+    color: var(--text-secondary) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .admin-user-form-field input,
+
+html[data-theme="dark"] body .admin-user-form-field select {
+
+    background-color: var(--input-bg) !important;
+
+    color: var(--text-primary) !important;
+
+    border-color: var(--border-color) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .admin-user-modal-note {
+
+    background-color: var(--accent-soft) !important;
+
+    color: var(--text-secondary) !important;
+
+    border-color: var(--border-color) !important;
+
+}
+
+
+
+/* =========================================
+
+   Admin Dashboard
+
+========================================= */
+
+
+
+html[data-theme="dark"] body .admin-dashboard-page .dashboard-stat-card,
+
+html[data-theme="dark"] body .admin-dashboard-page .dashboard-panel,
+
+html[data-theme="dark"] body .admin-dashboard-page .dashboard-welcome {
+
+    background: var(--surface) !important;
+
+    color: var(--text-primary) !important;
+
+    border-color: var(--border-color) !important;
+
+    box-shadow: var(--shadow-sm);
+
+}
+
+
+
+html[data-theme="dark"] body .admin-dashboard-page .dashboard-title,
+
+html[data-theme="dark"] body .admin-dashboard-page .dashboard-stat-value,
+
+html[data-theme="dark"] body .admin-dashboard-page .dashboard-panel-title,
+
+html[data-theme="dark"] body .admin-dashboard-page .dashboard-welcome-title {
+
+    color: var(--text-primary) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .admin-dashboard-page .dashboard-subtitle,
+
+html[data-theme="dark"] body .admin-dashboard-page .dashboard-stat-label,
+
+html[data-theme="dark"] body .admin-dashboard-page .dashboard-stat-note,
+
+html[data-theme="dark"] body .admin-dashboard-page .dashboard-panel-description,
+
+html[data-theme="dark"] body .admin-dashboard-page .dashboard-welcome-text {
+
+    color: var(--text-secondary) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .admin-dashboard-page .dashboard-panel-header {
+
+    border-color: var(--border-color) !important;
+
+}
+
+
+
+/* =========================================
+
+   Admin Layout
+
+========================================= */
+
+
+
+html[data-theme="dark"] body .admin-dashboard-layout,
+
+html[data-theme="dark"] body .admin-layout,
+
+html[data-theme="dark"] body .admin-content {
+
+    background-color: var(--app-bg) !important;
+
+    color: var(--text-primary) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .admin-sidebar,
+
+html[data-theme="dark"] body aside {
+
+    background-color: var(--surface) !important;
+
+    color: var(--text-primary) !important;
+
+    border-color: var(--border-color) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .admin-sidebar a,
+
+html[data-theme="dark"] body aside a {
+
+    color: var(--text-secondary);
+
+}
+
+
+
+/* =========================================
+
+   Common Alerts and Buttons
+
+========================================= */
+
+
+
+html[data-theme="dark"] body .alert-success {
+
+    background-color: var(--success-soft) !important;
+
+    color: var(--success) !important;
+
+    border-color: var(--border-color) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .alert-danger {
+
+    background-color: var(--danger-soft) !important;
+
+    color: var(--danger) !important;
+
+    border-color: var(--border-color) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .alert-warning {
+
+    background-color: var(--warning-soft) !important;
+
+    color: var(--warning) !important;
+
+    border-color: var(--border-color) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .btn-light,
+
+html[data-theme="dark"] body .admin-modal-cancel,
+
+html[data-theme="dark"] body .admin-user-cancel {
+
+    background-color: var(--surface-secondary) !important;
+
+    color: var(--text-primary) !important;
+
+    border-color: var(--border-color) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .btn-close {
+
+    filter: invert(1) grayscale(100%);
+
+}
+
+
+
+/* =========================================
+
+   Login and Forms
+
+========================================= */
+
+
+
+html[data-theme="dark"] body .login-page {
+
+    background-color: var(--app-bg) !important;
+
+    color: var(--text-primary) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .login-card {
+
+    background-color: var(--surface) !important;
+
+    color: var(--text-primary) !important;
+
+    border-color: var(--border-color) !important;
+
+    box-shadow: var(--shadow-lg);
+
+}
+
+
+
+html[data-theme="dark"] body .login-card h1,
+
+html[data-theme="dark"] body .login-card h2,
+
+html[data-theme="dark"] body .login-card label,
+
+html[data-theme="dark"] body .login-card p,
+
+html[data-theme="dark"] body .login-card .register-text {
+
+    color: var(--text-primary);
+
+}
+
+
+
+html[data-theme="dark"] body .login-input-wrapper {
+
+    background-color: var(--input-bg) !important;
+
+    color: var(--text-secondary) !important;
+
+    border-color: var(--border-color) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .login-input-wrapper input {
+
+    background: transparent !important;
+
+    color: var(--text-primary) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .login-input-wrapper input::placeholder {
+
+    color: var(--text-muted) !important;
+
+}
+
+
+
+/* =========================================
+
+   Cart and Wishlist
+
+========================================= */
+
+
+
+html[data-theme="dark"] body .wishlist-page,
+
+html[data-theme="dark"] body .cart-page,
+
+html[data-theme="dark"] body .checkout-page,
+
+html[data-theme="dark"] body .profile-page {
+
+    background-color: var(--app-bg) !important;
+
+    color: var(--text-primary) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .wishlist-product,
+
+html[data-theme="dark"] body .wishlist-empty,
+
+html[data-theme="dark"] body .wishlist-header,
+
+html[data-theme="dark"] body .cart-item,
+
+html[data-theme="dark"] body .cart-summary,
+
+html[data-theme="dark"] body .checkout-card,
+
+html[data-theme="dark"] body .profile-card {
+
+    background-color: var(--surface) !important;
+
+    color: var(--text-primary) !important;
+
+    border-color: var(--border-color) !important;
+
+}
+
+
+
+/* =========================================
+
+   Product and Category Cards
+
+========================================= */
+
+
+
+html[data-theme="dark"] body .product-card,
+
+html[data-theme="dark"] body .category-card,
+
+html[data-theme="dark"] body .product-details-card {
+
+    background-color: var(--surface) !important;
+
+    color: var(--text-primary) !important;
+
+    border-color: var(--border-color) !important;
+
+    box-shadow: var(--shadow-sm);
+
+}
+
+
+
+html[data-theme="dark"] body .product-card h1,
+
+html[data-theme="dark"] body .product-card h2,
+
+html[data-theme="dark"] body .product-card h3,
+
+html[data-theme="dark"] body .product-card h4,
+
+html[data-theme="dark"] body .product-card h5,
+
+html[data-theme="dark"] body .product-card p,
+
+html[data-theme="dark"] body .product-card .card-title,
+
+html[data-theme="dark"] body .product-card .card-text {
+
+    color: var(--text-primary);
+
+}
+
+
+
+/* =========================================
+
+   Smooth Theme Transition
+
+========================================= */
+
+
+
+body,
+
+body .card,
+
+body .navbar-custom,
+
+body .admin-inventory-card,
+
+body .users-directory-card,
+
+body .admin-product-modal,
+
+body .admin-user-modal {
+
+    transition:
+
+        background-color 0.22s ease,
+
+        color 0.22s ease,
+
+        border-color 0.22s ease,
+
+        box-shadow 0.22s ease;
+
+}
+
+
+
+::selection {
+
+    background-color: var(--accent-soft);
+
+    color: var(--text-primary);
+
+}
+
+
+
+/* =========================================
+
+   Dark Mode - Store and Admin Contrast Fix
+
+========================================= */
+
+
+
+/* Home Hero */
+
+html[data-theme="dark"] body .hero {
+
+    background: var(--surface) !important;
+
+    color: var(--text-primary) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .hero-content h1,
+
+html[data-theme="dark"] body .hero-content p {
+
+    color: var(--text-primary) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .hero-content p {
+
+    color: var(--text-secondary) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .hero-content .highlight-2 {
+
+    color: var(--accent) !important;
+
+}
+
+
+
+/* Home Categories */
+
+html[data-theme="dark"] body .top-categories {
+
+    background-color: var(--app-bg) !important;
+
+    color: var(--text-primary) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .top-categories .section-title h2 {
+
+    color: var(--text-primary) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .top-categories .section-title p {
+
+    color: var(--text-secondary) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .top-categories .view-all a {
+
+    color: var(--accent) !important;
+
+}
+
+
+
+/* Product Cards */
+
+html[data-theme="dark"] body .product-card,
+
+html[data-theme="dark"] body .product-card .card-body,
+
+html[data-theme="dark"] body .product-card .card-footer {
+
+    background-color: var(--surface) !important;
+
+    color: var(--text-primary) !important;
+
+    border-color: var(--border-color) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .product-card h1,
+
+html[data-theme="dark"] body .product-card h2,
+
+html[data-theme="dark"] body .product-card h3,
+
+html[data-theme="dark"] body .product-card h4,
+
+html[data-theme="dark"] body .product-card h5,
+
+html[data-theme="dark"] body .product-card .card-title {
+
+    color: var(--text-primary) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .product-card p,
+
+html[data-theme="dark"] body .product-card small,
+
+html[data-theme="dark"] body .product-card .card-text {
+
+    color: var(--text-secondary) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .product-card .product-price,
+
+html[data-theme="dark"] body .product-card .price {
+
+    color: var(--success) !important;
+
+}
+
+
+
+/* Product Filters and Sidebar */
+
+html[data-theme="dark"] body main aside,
+
+html[data-theme="dark"] body .products-sidebar,
+
+html[data-theme="dark"] body .filters-sidebar,
+
+html[data-theme="dark"] body .filter-sidebar {
+
+    background-color: var(--surface) !important;
+
+    color: var(--text-primary) !important;
+
+    border-color: var(--border-color) !important;
+
+}
+
+
+
+html[data-theme="dark"] body main aside h1,
+
+html[data-theme="dark"] body main aside h2,
+
+html[data-theme="dark"] body main aside h3,
+
+html[data-theme="dark"] body main aside h4,
+
+html[data-theme="dark"] body main aside h5,
+
+html[data-theme="dark"] body main aside label,
+
+html[data-theme="dark"] body main aside p,
+
+html[data-theme="dark"] body main aside span {
+
+    color: var(--text-secondary) !important;
+
+}
+
+
+
+/* Footer */
+
+html[data-theme="dark"] body footer,
+
+html[data-theme="dark"] body .footer,
+
+html[data-theme="dark"] body .footer-container {
+
+    background-color: var(--surface) !important;
+
+    color: var(--text-secondary) !important;
+
+    border-color: var(--border-color) !important;
+
+}
+
+
+
+html[data-theme="dark"] body footer h1,
+
+html[data-theme="dark"] body footer h2,
+
+html[data-theme="dark"] body footer h3,
+
+html[data-theme="dark"] body footer h4,
+
+html[data-theme="dark"] body footer p,
+
+html[data-theme="dark"] body footer a {
+
+    color: var(--text-secondary) !important;
+
+}
+
+
+
+/* Admin Layout */
+
+html[data-theme="dark"] body .min-vh-100 {
+
+    background-color: var(--app-bg) !important;
+
+    color: var(--text-primary) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .min-vh-100>div {
+
+    background-color: var(--app-bg) !important;
+
+    color: var(--text-primary) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .min-vh-100 header {
+
+    background-color: var(--surface) !important;
+
+    color: var(--text-primary) !important;
+
+    border-color: var(--border-color) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .min-vh-100 header h1,
+
+html[data-theme="dark"] body .min-vh-100 header h2,
+
+html[data-theme="dark"] body .min-vh-100 header h3,
+
+html[data-theme="dark"] body .min-vh-100 header h4,
+
+html[data-theme="dark"] body .min-vh-100 header h5,
+
+html[data-theme="dark"] body .min-vh-100 header p,
+
+html[data-theme="dark"] body .min-vh-100 header small {
+
+    color: var(--text-primary) !important;
+
+}
+
+
+
+/* Keep admin sidebar readable */
+
+html[data-theme="dark"] body .min-vh-100 aside {
+
+    background-color: var(--surface) !important;
+
+    border-color: var(--border-color) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .min-vh-100 aside a {
+
+    color: var(--text-secondary) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .min-vh-100 aside a[aria-current="page"] {
+
+    background-color: var(--accent-soft) !important;
+
+    color: var(--accent) !important;
+
+}
+
+
+
+/* Theme-aware modal surfaces */
+
+html[data-theme="dark"] body .admin-product-modal,
+
+html[data-theme="dark"] body .admin-user-modal,
+
+html[data-theme="dark"] body .admin-product-modal-header,
+
+html[data-theme="dark"] body .admin-user-modal-header {
+
+    background-color: var(--surface) !important;
+
+    color: var(--text-primary) !important;
+
+    border-color: var(--border-color) !important;
+
+}
+
+
+
+html[data-theme="dark"] body .admin-product-modal-body,
+
+html[data-theme="dark"] body .admin-user-modal-body {
+
+    color: var(--text-secondary) !important;
+
+}
+
+
+
+/* =========================================
+
+   Global Dark Mode Fix - Checkout & Surfaces
+
+========================================= */
+
+
+
+html[data-theme="dark"] body {
+
+
+
+    /* Checkout page */
+
+    .checkout-page {
+
+        background: var(--app-bg) !important;
+
+        color: var(--text-primary) !important;
+
+    }
+
+
+
+    .checkout-header h1 {
+
+        color: var(--text-primary) !important;
+
+    }
+
+
+
+    .checkout-header p {
+
+        color: var(--text-secondary) !important;
+
+    }
+
+
+
+    /* Main shipping and payment panels */
+
+    .checkout-section {
+
+        background: var(--surface) !important;
+
+        color: var(--text-primary) !important;
+
+        border: 1px solid var(--border-color) !important;
+
+        box-shadow: var(--shadow-sm);
+
+    }
+
+
+
+    .checkout-section h1,
+
+    .checkout-section h2,
+
+    .checkout-section h3,
+
+    .checkout-section .section-title h2 {
+
+        color: var(--text-primary) !important;
+
+    }
+
+
+
+    .checkout-section p,
+
+    .checkout-section label {
+
+        color: var(--text-secondary) !important;
+
+    }
+
+
+
+    .checkout-section .section-title p {
+
+        color: var(--text-muted) !important;
+
+    }
+
+
+
+    /* Payment panel */
+
+    .payment-method {
+
+        background: var(--surface-secondary) !important;
+
+        color: var(--text-primary) !important;
+
+        border-color: var(--border-color) !important;
+
+    }
+
+
+
+    .payment-method-header,
+
+    .payment-method-name,
+
+    .payment-method-name span {
+
+        color: var(--text-primary) !important;
+
+    }
+
+
+
+    .payment-secure {
+
+        color: var(--success) !important;
+
+    }
+
+
+
+    .payment-note {
+
+        background: var(--success-soft) !important;
+
+        color: var(--success) !important;
+
+        border-color: var(--border-color) !important;
+
+    }
+
+
+
+    .payment-note span {
+
+        color: inherit !important;
+
+    }
+
+
+
+    /* Order Summary */
+
+    .checkout-summary {
+
+        background: var(--surface) !important;
+
+        color: var(--text-primary) !important;
+
+        border-color: var(--border-color) !important;
+
+        box-shadow: var(--shadow-sm);
+
+    }
+
+
+
+    .checkout-summary h1,
+
+    .checkout-summary h2,
+
+    .checkout-summary h3,
+
+    .checkout-summary strong {
+
+        color: var(--text-primary) !important;
+
+    }
+
+
+
+    .checkout-summary p,
+
+    .checkout-summary span {
+
+        color: var(--text-secondary);
+
+    }
+
+
+
+    .summary-header,
+
+    .summary-products,
+
+    .summary-product,
+
+    .summary-totals {
+
+        border-color: var(--border-color) !important;
+
+    }
+
+
+
+    .summary-product {
+
+        background: var(--surface) !important;
+
+        color: var(--text-primary) !important;
+
+    }
+
+
+
+    .summary-product-info h3 {
+
+        color: var(--text-primary) !important;
+
+    }
+
+
+
+    .summary-product-info span {
+
+        color: var(--text-secondary) !important;
+
+    }
+
+
+
+    /* Checkout actions */
+
+    .back-to-cart {
+
+        background: var(--surface) !important;
+
+        color: var(--accent) !important;
+
+        border-color: var(--border-color) !important;
+
+    }
+
+
+
+    /* Common page backgrounds */
+
+    .cart-page,
+
+    .wishlist-page,
+
+    .profile-page,
+
+    .orders-page,
+
+    .checkout-page {
+
+        background-color: var(--app-bg) !important;
+
+        color: var(--text-primary) !important;
+
+    }
+
+
+
+    /* Shared card surfaces */
+
+    .checkout-section,
+
+    .checkout-summary,
+
+    .order-card,
+
+    .profile-sidebar,
+
+    .profile-header-card,
+
+    .profile-stat-card,
+
+    .recent-orders-card,
+
+    .wishlist-product,
+
+    .wishlist-empty,
+
+    .cart-item,
+
+    .cart-summary {
+
+        background-color: var(--surface) !important;
+
+        color: var(--text-primary) !important;
+
+        border-color: var(--border-color) !important;
+
+    }
+
+
+
+    /* Visible headings inside those surfaces */
+
+    .order-card h1,
+
+    .order-card h2,
+
+    .order-card h3,
+
+    .profile-page h1,
+
+    .profile-page h2,
+
+    .profile-page h3,
+
+    .cart-page h1,
+
+    .cart-page h2,
+
+    .cart-page h3,
+
+    .wishlist-page h1,
+
+    .wishlist-page h2,
+
+    .wishlist-page h3 {
+
+        color: var(--text-primary) !important;
+
+    }
+
+}
+
+/* =========================================
+   ShopStream Theme - Unified Text, Surfaces & Interactions
+   Keep component behaviour in React; this file controls appearance.
+========================================= */
+
+/* Make theme text readable even when Bootstrap utility classes are used. */
+html[data-theme="dark"] body .text-dark,
+html[data-theme="dark"] body .text-body,
+html[data-theme="dark"] body .text-black,
+html[data-theme="dark"] body .text-black-50 {
+    color: var(--text-primary) !important;
+}
+
+/* Global dark-mode heading/title contrast. */
+html[data-theme="dark"] body :is(h1, h2, h3, h4, h5, h6,
+    .card-title,
+    [class*="title"],
+    [class*="product-name"],
+    [class*="person-name"]) {
+    color: var(--text-primary) !important;
+}
+
+/* Specific text fixes for pages where older local styles use dark fixed colours. */
+html[data-theme="dark"] body .cart-page {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    [class*="title"],
+    [class*="name"] {
+        color: var(--text-primary) !important;
+    }
+
+    p,
+    small,
+    label,
+    [class*="label"],
+    [class*="category"] {
+        color: var(--text-secondary);
+    }
+
+    .cart-item,
+    .cart-summary {
+        background: var(--surface) !important;
+        color: var(--text-primary) !important;
+        border-color: var(--border-color) !important;
+    }
+
+    .cart-item [class*="title"],
+    .cart-item [class*="name"],
+    .cart-item h1,
+    .cart-item h2,
+    .cart-item h3,
+    .cart-item h4,
+    .cart-item h5,
+    .cart-item h6 {
+        color: var(--text-primary) !important;
+    }
+
+    .cart-summary [class*="delivery"],
+    .cart-summary [class*="shipping"],
+    .cart-summary [class*="notice"] {
+        background: var(--surface-secondary) !important;
+        color: var(--text-secondary) !important;
+        border-color: var(--border-color) !important;
+    }
+}
+
+/* Keep product/category surfaces tied to theme variables. */
+html[data-theme="dark"] body :is(.product-card,
+    .product-details-card,
+    .category-card,
+    .order-card,
+    .wishlist-product,
+    .wishlist-card,
+    .cart-item,
+    .cart-summary,
+    .profile-card,
+    .profile-sidebar,
+    .profile-header-card,
+    .profile-stat-card,
+    .recent-orders-card,
+    .checkout-section,
+    .checkout-summary,
+    .dashboard-stat-card,
+    .dashboard-panel,
+    .dashboard-welcome,
+    .admin-inventory-card,
+    .admin-mini-stat,
+    .users-directory-card,
+    .users-stat-card) {
+    background-color: var(--surface) !important;
+    color: var(--text-primary) !important;
+    border-color: var(--border-color) !important;
+}
+
+html[data-theme="dark"] body :is(.product-card,
+    .product-details-card,
+    .category-card,
+    .order-card,
+    .wishlist-product,
+    .wishlist-card,
+    .cart-item,
+    .cart-summary,
+    .profile-card,
+    .profile-sidebar,
+    .profile-header-card,
+    .profile-stat-card,
+    .recent-orders-card,
+    .checkout-section,
+    .checkout-summary,
+    .dashboard-stat-card,
+    .dashboard-panel,
+    .dashboard-welcome,
+    .admin-inventory-card,
+    .admin-mini-stat,
+    .users-directory-card,
+    .users-stat-card) :is(p, small, label, .card-text) {
+    color: var(--text-secondary);
+}
+
+/* =========================================
+   Register page - Dark Mode
+========================================= */
+html[data-theme="dark"] body .register-page {
+    background: var(--app-bg) !important;
+    color: var(--text-primary) !important;
+}
+
+html[data-theme="dark"] body .register-card {
+    background: var(--surface) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-color) !important;
+    box-shadow: var(--shadow-lg) !important;
+}
+
+html[data-theme="dark"] body .register-header h1,
+html[data-theme="dark"] body .register-field label {
+    color: var(--text-primary) !important;
+}
+
+html[data-theme="dark"] body .register-header p,
+html[data-theme="dark"] body .login-text {
+    color: var(--text-secondary) !important;
+}
+
+html[data-theme="dark"] body .register-input-wrapper {
+    background: var(--input-bg) !important;
+    color: var(--text-secondary) !important;
+    border-color: var(--border-color) !important;
+}
+
+html[data-theme="dark"] body .register-input-wrapper:focus-within {
+    border-color: var(--accent) !important;
+    box-shadow: 0 0 0 3px var(--accent-soft) !important;
+}
+
+html[data-theme="dark"] body .register-input-wrapper>svg {
+    color: var(--text-secondary) !important;
+}
+
+html[data-theme="dark"] body .register-input-wrapper input {
+    background: transparent !important;
+    color: var(--text-primary) !important;
+    caret-color: var(--accent) !important;
+}
+
+html[data-theme="dark"] body .register-input-wrapper input::placeholder {
+    color: var(--text-muted) !important;
+    opacity: 1;
+}
+
+html[data-theme="dark"] body .show-password {
+    background: transparent !important;
+    color: var(--text-secondary) !important;
+}
+
+html[data-theme="dark"] body .register-terms {
+    color: var(--text-secondary) !important;
+}
+
+html[data-theme="dark"] body .register-terms input[type="checkbox"] {
+    accent-color: var(--accent);
+}
+
+html[data-theme="dark"] body .terms-link,
+html[data-theme="dark"] body .login-text a {
+    color: var(--accent) !important;
+}
+
+html[data-theme="dark"] body .register-error {
+    color: var(--danger) !important;
+}
+
+html[data-theme="dark"] body .register-divider,
+html[data-theme="dark"] body .register-divider p {
+    color: var(--text-muted) !important;
+}
+
+html[data-theme="dark"] body .register-divider span {
+    background: var(--border-color) !important;
+}
+
+html[data-theme="dark"] body .social-btn {
+    background: var(--surface-secondary) !important;
+    color: var(--text-primary) !important;
+    border-color: var(--border-color) !important;
+}
+
+html[data-theme="dark"] body .register-submit {
+    color: #fff !important;
+}
+
+/* =========================================
+   Unified interaction transitions
+========================================= */
+:where(a, button, [role="button"], input[type="button"], input[type="submit"], select, summary) {
+    transition:
+        color 0.18s ease,
+        background-color 0.18s ease,
+        border-color 0.18s ease,
+        box-shadow 0.18s ease,
+        filter 0.18s ease;
+}
+
+/* Links get accent feedback without forcing the same background on every button. */
+@media (hover: hover) and (pointer: fine) {
+    a:hover {
+        color: var(--accent-hover);
+    }
+
+    button:not(:disabled):not(.show-password):hover,
+    input[type="button"]:not(:disabled):hover,
+    input[type="submit"]:not(:disabled):hover,
+    [role="button"]:hover {
+        filter: brightness(1.06);
+    }
+
+    /* Cards designed as product/category/order tiles may lift subtly. */
+    :is(.product-card,
+        .product-details-card,
+        .category-card,
+        .order-card,
+        .wishlist-product,
+        .wishlist-card,
+        .user-card,
+        .admin-stat-card,
+        .stat-card,
+        .dashboard-stat-card,
+        .admin-mini-stat,
+        .users-stat-card) {
+        transition:
+            transform 0.2s ease,
+            box-shadow 0.2s ease,
+            border-color 0.2s ease,
+            background-color 0.2s ease;
+    }
+
+    :is(.product-card,
+        .product-details-card,
+        .category-card,
+        .order-card,
+        .wishlist-product,
+        .wishlist-card,
+        .user-card,
+        .admin-stat-card,
+        .stat-card,
+        .dashboard-stat-card,
+        .admin-mini-stat,
+        .users-stat-card):hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-lg);
+        border-color: var(--accent) !important;
+    }
+
+    /* Shopping-cart rows should change color, not jump around the layout. */
+    :is(.cart-item, .cart-product):hover {
+        background-color: var(--surface-hover) !important;
+        border-color: var(--accent) !important;
+        box-shadow: var(--shadow-sm);
+    }
+
+    /* Image feedback stays inside the product/category card. */
+    .product-card {
+        overflow: hidden;
+    }
+
+    .product-card img,
+    .category-card img {
+        transition: transform 0.25s ease;
+    }
+
+    .product-card:hover img,
+    .category-card:hover img {
+        transform: scale(1.035);
+    }
+
+    /* Titles and names respond to hover on a related clickable card. */
+    :is(.product-card,
+        .product-details-card,
+        .category-card,
+        .order-card,
+        .cart-item,
+        .cart-product,
+        .wishlist-product,
+        .wishlist-card,
+        .user-card,
+        .admin-stat-card,
+        .stat-card,
+        .dashboard-stat-card,
+        .admin-mini-stat,
+        .users-stat-card):hover :is(h1, h2, h3, h4, h5, h6,
+        .card-title,
+        [class*="title"],
+        [class*="product-name"],
+        [class*="person-name"]) {
+        color: var(--accent) !important;
+    }
+
+    /* Category names sit over images, so preserve contrast with a bright accent. */
+    .category-card:hover .category-name {
+        color: var(--accent) !important;
+    }
+
+    /* Keyboard/focusable links and buttons get visible feedback too. */
+    :where(a, button, [role="button"], input[type="button"], input[type="submit"]):focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 3px;
+    }
+}
+
+/* Press feedback is limited to controls/cards; does not alter quantity layout. */
+button:not(:disabled):active,
+input[type="button"]:active,
+input[type="submit"]:active,
+[role="button"]:active {
+    filter: brightness(0.94);
+}
+
+:is(.product-card, .product-details-card, .category-card, .order-card, .wishlist-product, .wishlist-card):active {
+    border-color: var(--accent) !important;
+}
+
+/* Active form fields use one consistent theme accent. */
+:where(input:not([type="checkbox"]):not([type="radio"]), textarea, select):focus-visible {
+    border-color: var(--accent);
+    outline: none;
+    box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    accent-color: var(--accent);
+}
+
+/* Respect the visitor's reduced-motion preference. */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}

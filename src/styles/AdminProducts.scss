@@ -1,0 +1,766 @@
+$admin-primary: #5146f5;
+$admin-green: #19b98a;
+$admin-text: #202b40;
+$admin-muted: #8490a5;
+$admin-border: #e5e9f2;
+$admin-background: #f5f7fb;
+
+.admin-products-page {
+    color: $admin-text;
+    min-width: 0;
+
+    .admin-products-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 18px;
+        margin-bottom: 24px;
+    }
+
+    .admin-breadcrumb {
+        color: $admin-muted;
+        font-size: 11px;
+        margin-bottom: 5px;
+    }
+
+    .admin-products-title {
+        font-size: 25px;
+        font-weight: 750;
+        letter-spacing: -0.6px;
+        margin: 0 0 5px;
+    }
+
+    .admin-products-subtitle {
+        color: $admin-muted;
+        font-size: 12px;
+        margin: 0;
+    }
+
+    .admin-primary-btn {
+        min-height: 36px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 9px 15px;
+        border: 0;
+        border-radius: 7px;
+        background: $admin-green;
+        color: #fff;
+        font-size: 11px;
+        font-weight: 650;
+        transition:
+            background 0.2s ease,
+            transform 0.2s ease;
+
+        &:hover {
+            background: #139f76;
+            transform: translateY(-1px);
+        }
+    }
+
+    .admin-inventory-card {
+        overflow: hidden;
+        border: 1px solid $admin-border;
+        border-radius: 11px;
+        background: #fff;
+        box-shadow: 0 2px 8px rgba(29, 43, 73, 0.025);
+    }
+
+    .admin-product-toolbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 13px;
+        border-bottom: 1px solid $admin-border;
+    }
+
+    .admin-product-search {
+        position: relative;
+        flex: 1;
+        min-width: 200px;
+        max-width: 350px;
+
+        >svg {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #9aa4b7;
+            font-size: 12px;
+            pointer-events: none;
+        }
+
+        input {
+            width: 100%;
+            height: 35px;
+            padding: 0 12px 0 32px;
+            border: 1px solid $admin-border;
+            border-radius: 6px;
+            outline: none;
+            background: #fff;
+            color: $admin-text;
+            font-size: 11px;
+
+            &::placeholder {
+                color: #a0a9ba;
+            }
+
+            &:focus {
+                border-color: #aaa6ff;
+                box-shadow: 0 0 0 3px rgba(81, 70, 245, 0.08);
+            }
+        }
+    }
+
+    .admin-toolbar-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+    }
+
+    .admin-outline-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+        min-height: 34px;
+        padding: 7px 11px;
+        border: 1px solid $admin-border;
+        border-radius: 6px;
+        background: #fff;
+        color: #637087;
+        font-size: 10px;
+        font-weight: 550;
+        white-space: nowrap;
+
+        &:hover {
+            border-color: #c5c2ff;
+            background: #f8f7ff;
+            color: $admin-primary;
+        }
+
+        &:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    }
+
+    .admin-filter-panel {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        padding: 14px;
+        background: #fbfcff;
+        border-bottom: 1px solid $admin-border;
+
+        label {
+            display: block;
+            color: #5e6a80;
+            font-size: 11px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        select {
+            min-width: 175px;
+            height: 35px;
+            padding: 0 10px;
+            border: 1px solid $admin-border;
+            border-radius: 6px;
+            background: #fff;
+            color: $admin-text;
+            font-size: 11px;
+        }
+    }
+
+    .admin-products-table-wrap {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .admin-products-table {
+        width: 100%;
+        min-width: 680px;
+        margin: 0;
+        border-collapse: collapse;
+        font-size: 11px;
+
+        thead th {
+            padding: 13px 12px;
+            background: #fafbfe;
+            border-bottom: 1px solid $admin-border;
+            color: #6e7b91;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        tbody td {
+            padding: 12px;
+            border-bottom: 1px solid #eef1f6;
+            vertical-align: middle;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: 0;
+        }
+
+        tbody tr {
+            transition: background 0.15s ease;
+
+            &:hover {
+                background: #fcfcff;
+            }
+        }
+    }
+
+    .admin-product-cell {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        min-width: 195px;
+    }
+
+    .admin-product-thumb {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 37px;
+        height: 37px;
+        overflow: hidden;
+        border: 1px solid #edf0f5;
+        border-radius: 6px;
+        background: #f7f8fb;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .admin-product-name {
+        max-width: 210px;
+        overflow: hidden;
+        color: $admin-text;
+        font-size: 11px;
+        font-weight: 650;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .admin-product-sku {
+        margin-top: 4px;
+        color: #98a2b5;
+        font-size: 9px;
+    }
+
+    .admin-category-pill {
+        display: inline-block;
+        padding: 4px 7px;
+        border-radius: 5px;
+        background: #efedff;
+        color: $admin-primary;
+        font-size: 9px;
+        font-weight: 650;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+
+    .admin-stock-status {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        white-space: nowrap;
+        font-size: 10px;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            flex-shrink: 0;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+        }
+
+        &.is-in-stock {
+            color: #11966b;
+
+            &::before {
+                background: #12ae7c;
+            }
+        }
+
+        &.is-low-stock {
+            color: #e24f57;
+
+            &::before {
+                background: #f04d57;
+            }
+        }
+
+        &.is-out-of-stock {
+            color: #8992a4;
+
+            &::before {
+                background: #a5adbb;
+            }
+        }
+    }
+
+    .admin-product-actions {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .admin-icon-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 25px;
+        height: 27px;
+        padding: 0;
+        border: 0;
+        border-radius: 5px;
+        background: transparent;
+        font-size: 12px;
+
+        &.is-edit {
+            color: $admin-primary;
+
+            &:hover {
+                background: #efedff;
+            }
+        }
+
+        &.is-delete {
+            color: #e2525d;
+
+            &:hover {
+                background: #fff0f1;
+            }
+        }
+    }
+
+    .admin-table-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        padding: 12px 14px;
+        border-top: 1px solid $admin-border;
+    }
+
+    .admin-table-count {
+        color: $admin-muted;
+        font-size: 10px;
+    }
+
+    .admin-pagination {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+
+        button,
+        span {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 25px;
+            height: 26px;
+            padding: 0 6px;
+            border: 0;
+            border-radius: 5px;
+            background: transparent;
+            color: #69768d;
+            font-size: 10px;
+        }
+
+        button:disabled {
+            opacity: 0.35;
+            cursor: not-allowed;
+        }
+
+        button:not(:disabled):hover {
+            background: #f0efff;
+            color: $admin-primary;
+        }
+
+        .is-active {
+            background: $admin-primary;
+            color: #fff;
+        }
+    }
+
+    .admin-bottom-stats {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 13px;
+        margin-top: 22px;
+    }
+
+    .admin-mini-stat {
+        min-width: 0;
+        padding: 15px;
+        border: 1px solid #edf0f6;
+        border-radius: 9px;
+        background: #fff;
+
+        .admin-mini-stat-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .admin-mini-stat-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            background: #efedff;
+            color: $admin-primary;
+        }
+
+        .admin-mini-stat-label {
+            margin-bottom: 5px;
+            color: #7d899c;
+            font-size: 9px;
+            text-transform: uppercase;
+            letter-spacing: 0.35px;
+        }
+
+        .admin-mini-stat-value {
+            margin: 0;
+            color: $admin-text;
+            font-size: 18px;
+            font-weight: 750;
+        }
+
+        .admin-mini-stat-change {
+            color: #14a478;
+            font-size: 9px;
+            font-weight: 650;
+        }
+    }
+}
+
+/* Add / Edit Product Modal */
+
+.admin-product-modal-backdrop {
+    position: fixed;
+    z-index: 1050;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow-y: auto;
+    background: rgba(29, 37, 58, 0.42);
+    backdrop-filter: blur(2px);
+}
+
+.admin-product-modal {
+    width: 100%;
+    max-width: 570px;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 22px 65px rgba(26, 35, 60, 0.22);
+    animation: adminModalEnter 0.18s ease-out;
+}
+
+.admin-product-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 19px 22px;
+    border-bottom: 1px solid #eff1f5;
+
+    h3 {
+        margin: 0;
+        color: $admin-text;
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        border: 0;
+        border-radius: 5px;
+        background: transparent;
+        color: #8a94a6;
+        font-size: 13px;
+
+        &:hover {
+            background: #f2f4f8;
+            color: $admin-text;
+        }
+    }
+}
+
+.admin-product-modal-body {
+    padding: 19px 22px 22px;
+}
+
+.admin-product-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px 13px;
+}
+
+.admin-product-form-field {
+    min-width: 0;
+
+    &.is-full-width {
+        grid-column: 1 / -1;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 6px;
+        color: #5e6a80;
+        font-size: 10px;
+        font-weight: 650;
+    }
+
+    input,
+    select,
+    textarea {
+        display: block;
+        width: 100%;
+        min-height: 35px;
+        padding: 8px 10px;
+        outline: none;
+        border: 1px solid #dfe4ee;
+        border-radius: 6px;
+        background: #fff;
+        color: $admin-text;
+        font-size: 11px;
+        transition:
+            border-color 0.15s ease,
+            box-shadow 0.15s ease;
+
+        &::placeholder {
+            color: #a6afbf;
+        }
+
+        &:focus {
+            border-color: #aaa6ff;
+            box-shadow: 0 0 0 3px rgba(81, 70, 245, 0.08);
+        }
+    }
+
+    textarea {
+        min-height: 75px;
+        resize: vertical;
+    }
+}
+
+.admin-product-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 92px;
+    padding: 15px;
+    border: 1px dashed #cbd2e4;
+    border-radius: 7px;
+    background: #fafbff;
+    color: #858fa5;
+    text-align: center;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+
+    svg {
+        color: $admin-primary;
+        font-size: 18px;
+    }
+
+    span {
+        font-size: 10px;
+    }
+
+    &:hover {
+        border-color: #aaa6ff;
+        background: #f6f5ff;
+    }
+
+    input {
+        display: none;
+    }
+}
+
+.admin-product-image-preview {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+
+    img {
+        width: 44px;
+        height: 44px;
+        object-fit: contain;
+        border: 1px solid $admin-border;
+        border-radius: 6px;
+    }
+
+    span {
+        overflow-wrap: anywhere;
+        color: #68758b;
+        font-size: 10px;
+    }
+}
+
+.admin-product-modal-error {
+    margin-top: 14px;
+    padding: 9px 11px;
+    border: 1px solid #ffd6da;
+    border-radius: 6px;
+    background: #fff5f5;
+    color: #c83c49;
+    font-size: 11px;
+}
+
+.admin-product-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 9px;
+    padding: 15px 22px;
+    border-top: 1px solid #eff1f5;
+}
+
+.admin-modal-cancel,
+.admin-modal-submit {
+    min-height: 34px;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 650;
+}
+
+.admin-modal-cancel {
+    border: 1px solid $admin-border;
+    background: #fff;
+    color: #68758b;
+
+    &:hover {
+        background: #f7f8fb;
+    }
+}
+
+.admin-modal-submit {
+    border: 1px solid $admin-primary;
+    background: $admin-primary;
+    color: #fff;
+
+    &:hover {
+        background: #4034df;
+    }
+}
+
+@keyframes adminModalEnter {
+    from {
+        opacity: 0;
+        transform: translateY(7px) scale(0.99);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@media (max-width: 900px) {
+    .admin-products-page {
+        .admin-products-title {
+            font-size: 22px;
+        }
+
+        .admin-bottom-stats {
+            gap: 9px;
+        }
+
+        .admin-mini-stat {
+            padding: 12px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .admin-products-page {
+        .admin-products-heading {
+            align-items: flex-start;
+        }
+
+        .admin-product-toolbar {
+            align-items: stretch;
+        }
+
+        .admin-product-search {
+            max-width: none;
+            flex-basis: 100%;
+        }
+
+        .admin-toolbar-actions {
+            width: 100%;
+
+            >button {
+                flex: 1;
+            }
+        }
+
+        .admin-bottom-stats {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .admin-product-modal-backdrop {
+        padding: 10px;
+    }
+
+    .admin-product-modal {
+        max-height: calc(100vh - 20px);
+    }
+
+    .admin-product-modal-header {
+        padding: 15px 16px;
+    }
+
+    .admin-product-modal-body {
+        padding: 16px;
+    }
+
+    .admin-product-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-product-form-field.is-full-width {
+        grid-column: auto;
+    }
+
+    .admin-product-modal-footer {
+        padding: 12px 16px;
+    }
+}
